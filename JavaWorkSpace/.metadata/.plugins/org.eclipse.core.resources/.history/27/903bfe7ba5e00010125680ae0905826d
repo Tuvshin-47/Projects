@@ -1,0 +1,21 @@
+package JavaStart;
+
+import java.util.Iterator;
+
+public class lesson1 {
+	
+	int score;
+
+
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+		int score;
+		if (score >= 80) {
+			return "b";
+		}
+	}
+}

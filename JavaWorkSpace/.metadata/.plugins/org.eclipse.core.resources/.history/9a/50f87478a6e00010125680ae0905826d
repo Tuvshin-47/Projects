@@ -1,0 +1,25 @@
+package JavaStart;
+
+import java.util.Iterator;
+
+public class lesson1 {
+	
+	public static String grade(int score) {
+		char ret;
+		
+		if (score >= 80) {
+			return "pass B";
+		}else if (score >= 50) {
+			return 'P';
+		}else {
+			return 'F';
+		}
+	}
+
+
+	public static void main(String[] args) {
+		System.out.println(grade(85));
+		
+	}
+	
+}

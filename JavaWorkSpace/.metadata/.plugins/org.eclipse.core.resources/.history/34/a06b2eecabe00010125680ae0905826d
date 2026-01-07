@@ -1,0 +1,26 @@
+package JavaStart;
+
+
+public abstract class Ticket {
+	
+	public int ticketPrice(int age, boolean member) {
+	
+	int ret;
+	if ((age <= 10) || (age >=60)) {
+		return 10;
+	}else {
+		return 20;
+	}
+	
+	}
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

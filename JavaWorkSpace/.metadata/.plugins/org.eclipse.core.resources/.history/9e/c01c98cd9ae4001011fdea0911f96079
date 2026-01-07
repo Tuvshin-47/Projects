@@ -1,0 +1,12 @@
+package JavaStart;
+
+import java.util.Scanner;
+
+public class Hello {
+
+	
+	
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+	}
+}

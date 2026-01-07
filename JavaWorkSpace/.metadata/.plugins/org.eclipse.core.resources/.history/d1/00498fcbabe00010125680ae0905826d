@@ -1,0 +1,29 @@
+package JavaStart;
+
+import com.sun.org.apache.bcel.internal.generic.RETURN;
+
+public abstract class Ticket {
+	
+	public abstract int ticketPrice(int age, boolean member);
+	
+	int ret;
+	if ((age <= 10) || (age >=60)) {
+		return 10;
+	}else if {
+		return 20;
+	}
+	
+	RETURN ret;
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+
+}
