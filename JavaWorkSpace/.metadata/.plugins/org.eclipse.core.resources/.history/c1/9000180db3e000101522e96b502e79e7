@@ -1,8 +1,0 @@
-package JavaStart;
-
-public class sumDigits {
-
-	public static void sumDigit() {
-		
-	}
-}
