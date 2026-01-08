@@ -1,0 +1,1 @@
+print("Khurlee no bakaa")
