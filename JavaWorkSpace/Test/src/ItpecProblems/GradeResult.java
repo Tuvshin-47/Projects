@@ -1,0 +1,24 @@
+package ItpecProblems;
+
+public class GradeResult {
+
+	public static String grade(int score) {
+		char ret;
+		
+		if (score >= 80) {
+			return "Pass, " + "A";
+		}else if (score >= 50) {
+			return "Pass, " + "B";
+		}else {
+			return "Failed";
+		}
+	}
+
+
+	public static void main(String[] args) {
+		System.out.println(grade(85));
+		System.out.println(grade(75));
+		System.out.println(grade(35));
+		
+	}
+}
