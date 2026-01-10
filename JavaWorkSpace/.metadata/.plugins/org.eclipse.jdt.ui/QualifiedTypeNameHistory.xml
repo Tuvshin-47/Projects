@@ -11,9 +11,16 @@
     <fullyQualifiedTypeName name="JavaStart.sumDigits"/>
     <fullyQualifiedTypeName name="JavaStart.Hello"/>
     <fullyQualifiedTypeName name="JavaStart.SumDigits"/>
-    <fullyQualifiedTypeName name="sun.awt.www.content.audio.x_aiff"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.ls.LSOutput"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.runtime.StaticBaseConstructor"/>
+    <fullyQualifiedTypeName name="sun.awt.www.content.audio.x_aiff"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.lang.Number"/>
+    <fullyQualifiedTypeName name="jdk.internal.classfile.impl.BoundAttribute.BoundCompilationIDAttribute"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="org.w3c.dom.ls.LSOutput"/>
+    <fullyQualifiedTypeName name="com.sun.tools.classfile.Annotation.element_value"/>
+    <fullyQualifiedTypeName name="JavaStart.Human"/>
+    <fullyQualifiedTypeName name="JavaStart.Account"/>
 </qualifiedTypeNameHistroy>

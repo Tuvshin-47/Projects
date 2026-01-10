@@ -16,8 +16,9 @@ public class Lesson5 {
 					System.out.println(i +  "-р удаа: Сайн уу Tuvshin");
 				}
 
-		}else {
+		}else{
 			System.out.println("More High Number !!!");
+		
 		}
 		
 		
