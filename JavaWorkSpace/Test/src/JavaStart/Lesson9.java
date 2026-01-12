@@ -26,9 +26,38 @@ package JavaStart;
 	}
 }
 */
+class Student {
+private double score;
+    
+
+    public Student(double score) {
+        this.score = score;
+    }
+    
+    public double getScore() {
+        return score;
+    }
+    
+    // 2. Логикийг засах
+    public void setScore(double newScore) {
+
+        if (newScore >= 0 && newScore <= 100) { 
+            this.score = newScore;
+        } else {
+            System.out.println("Алдаа: Дүн 0-ээс 100-ын хооронд байх ёстой!");
+        }
+    }
+}
 
 
 public class Lesson9 {
+	public static void main(String[] args) {
+		Student newStudent = new Student(10);
+		
+		newStudent.setScore(84);
+		System.out.println("Таны дүн " + newStudent.getScore());
+		
+	}
 	
 	
 	
