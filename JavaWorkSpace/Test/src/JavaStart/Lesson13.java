@@ -2,26 +2,26 @@ package JavaStart;
 
 
 //Polymorphism
-class Weapon {
+class gameWeapon {
 	void fire() {
 		System.out.println("Weaping check");
 	}
 }
 	
-class Sword extends Weapon{
+class Sword extends gameWeapon{
 		@Override
 		void fire() {
 			System.out.println("Slashing");
 		}
 }		
-class Bow extends Weapon{
+class Bow extends gameWeapon{
 		@Override
 		void fire() {
 			System.out.println("Arrowing");
 		}
 	}
 	
-class Gun extends Weapon{
+class Gun extends gameWeapon{
 		@Override
 		void fire() {
 			System.out.println("Shoting");
@@ -33,9 +33,9 @@ class Gun extends Weapon{
 public class Lesson13 {
 	
 	public static void main(String[] args) {
-		Weapon[] armory = {new Sword(), new Bow(), new Sword()};
+		gameWeapon[] armory = {new Sword(), new Bow(), new Gun()};
 		
-		for (Weapon w : armory) {
+		for (gameWeapon w : armory) {
 			w.fire();
 		}
 	}
