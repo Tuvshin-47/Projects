@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: space-around; /* Элементүүдийг жигд зайтай байрлуулна */
+    flex-wrap: wrap; /* Дэлгэц жижигрэхэд доошоо шилжинэ */
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s; /* Хөдөлгөөнт эффект */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Хулгана дээгүүр нь гарахад дээшээ болно */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
