@@ -1,0 +1,272 @@
+.divRating {
+  display: flex; 
+  color: var(--Black, #000);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  width: 1168px;
+  height: 2000px;
+  margin: 0 auto;
+  flex-shrink: 0;
+  border-radius: 16px 16px 0px 0px;
+  background: var(--Gray-100, #f8f8f8);
+}
+
+/* Rating column */
+.ratingColumn {
+  margin-top: 24px;
+  margin-left: 31px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Toggle button row */
+.ratingFlex {
+  gap: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Star rating */
+.image {
+  display: flex;
+  gap: 4px;
+}
+
+/* Search container */
+.searchContainer {
+  margin-top: 24px;
+  margin-left: 40px;
+  position: relative;
+}
+
+.searchContainerImg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.searchContainerInput {
+  width: 583px;
+  height: 36px;
+  padding-left: 40px;
+  font-size: 16px;
+  border-radius: 999px;
+  border: none;
+  background: var(--Blue-Gray, #e3e8eb);
+}
+
+.searchContainerInput::placeholder {
+  color: var(--Black, #000);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Dropdown */
+.dropdownWrapper {
+  position: relative;
+  margin-top: 24px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.dropdown {
+  border-radius: 999px;
+  background: var(--Blue-Gray, #e3e8eb);
+  width: 240.5px;
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown arrow */
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Dropdown content */
+.dropdownContent {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  display: flex;
+  width: 295px;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 8px;
+  background: var(--White, #fff);
+
+  /* Shadow */
+  box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.16);
+  z-index: 10;
+}
+
+.dropdownItem {
+  background: none;
+  border: none;
+  width: 100%;
+  transition: background 0.2s;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--Black, #000);
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 1px solid #e3e8eb;
+}
+
+.dropdownButton {
+  color: var(--Black, #000);
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  border: none;
+  background-color: inherit;
+}
+.cancelApply {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 8px;
+}
+.cancel {
+  display: flex;
+  padding: 7.5px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background-color: inherit;
+  color: var(--Black, #000);
+  /* Button */
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+}
+.apply {
+  display: flex;
+  padding: 7.5px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background-color: inherit;
+  color: var(--White, #fff);
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 999px;
+  background: var(--Green, #0fa958);
+}
+.searchRecommend {
+  display: flex;
+  flex-direction: row;
+}
+.category {
+  padding-left: 40px;
+  padding-top: 32px;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.categoryItem {
+  width: 847.5px;
+  height: 120px;
+  border-radius: 16px;
+  background: var(--White, #fff);
+  box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.16);
+  margin-top: 24px;
+  display: flex;
+  gap: 24px;
+}
+.foodImage {
+  width: 184.84px;
+  height: 120px;
+  border-radius: 16px;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+.title {
+  color: var(--Black, #000);
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 600;
+}
+.name {
+  color: var(--Gray-400, #676767);
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 400;
+}
+.bigTitle {
+  color: var(--Black, #000);
+  font-family: "Poppins";
+  font-size: 22px;
+  font-weight: 700;
+}
+.information {
+  margin-top: 12px;
+  display: flex;
+  color: var(--Black, #000);
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  gap: 5px;
+}
+.noResults {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 160px;
+  align-items: center;
+}
+.cantFind {
+  color: var(--Black, #000);
+  font-size: 22px;
+  font-weight: 700;
+}
+.Tryagain {
+  color: var(--Black, #000);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: 0;
+}
+.ResetButton {
+  display: inline-flex;
+  padding: 7.5px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 999px;
+  background: var(--Green, #0fa958);
+  border: none;
+  color: var(--White, #fff);
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 10px;
+}
+
