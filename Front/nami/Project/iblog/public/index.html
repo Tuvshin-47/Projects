@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/login.css" />
+</head>
+<body>
+  <!-- /* iblog logo heseg */ -->
+  <div class="logo">
+    <div id="logoTitle">
+      <img class="logoImage" src="./img/logo.svg" alt="" />
+      <p>i</p>
+      <p>blog</p>
+    </div>
+    <div id="search">
+      <input class="searchInput" type="text" placeholder="Хайх" />
+      <img class="searchImage" src="./img/search-normal.svg" alt="" />
+    </div>
+    <div id="buttonSign">
+      <button class="register">Бүртгүүлэх</button>
+      <button>Нэвтрэх</button>
+    </div>
+  </div>
+  <!-- /* register form */ -->
+  <div class="parentContainer">
+    <div class="childContainer">
+      <p>Нэвтрэх</p>
+
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="email">
+            <input type="email" id="email" placeholder="И-мэйл эсвэл утасны дугаар" required />
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="password">
+            <input type="password" id="password" placeholder="Нууц үг" required />
+            <img id="hide1" src="./img/hide.png" alt="Toggle password visibility" />
+          </label>
+          <div id="passwordError" class="error"></div>
+        </div>
+        <p id="forgotPassword">Нууц үг мартсан уу?</p>
+        <button type="submit" id="submit">Нэвтрэх</button>
+        <div class="gmailRegister">
+          <img src="./img/google.png" alt="" />
+          <p>Gmail-ээр нэвтрэх</p>
+        </div>
+        <div class="facebookRegister">
+          <img src="./img/fb.png" alt="" />
+          <p>Facebook-ээр нэвтрэх</p>
+        </div>
+        <div id="or">
+          <div></div>
+          <div>Эсвэл</div>
+          <div></div>
+        </div>
+        <button class="register" type="submit2" id="submit2">Бүртгүүлэх</button>
+      </form>
+    </div>
+  </div>
+  <!-- contact heseg -->
+  <div class="contactContainer">
+    <div class="logo2">
+      <div id="logoTitle">
+        <img class="logoImage" src="./img/logo.svg" alt="" />
+        <p>i</p>
+        <p>blog</p>
+      </div>
+      <div class="logo3">
+        <p>Write,Read,Enjoy</p>
+      </div>
+    </div>
+    <div class="help">
+      <p>Тусламж</p>
+      <p>Хэрэглэх заавар</p>
+      <p>Санал хүсэлт</p>
+    </div>
+    <div class="bidenteiHolbogdoh">
+      <div>Бидэнтэй холбогдох</div>
+      <div id="usingFlex">
+        <img src="./img/fi_mail.svg" alt="" />
+        <p>info@jstemplate.net</p>
+      </div>
+      <div id="usingFlex">
+        <img src="./img/fi_phone.svg" alt="" />
+        <p>+976 99112344</p>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./js/script.js"></script>
+</body>
+</html>

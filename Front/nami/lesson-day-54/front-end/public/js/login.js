@@ -1,0 +1,43 @@
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js';
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+} from 'https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js';
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyBJ9mSrU0IH-Ir3Ov2I2g_rNk05qvAujMQ',
+  authDomain: 'nippon-fall-2024-nami.firebaseapp.com',
+  projectId: 'nippon-fall-2024-nami',
+  storageBucket: 'nippon-fall-2024-nami.firebasestorage.app',
+  messagingSenderId: '739431408047',
+  appId: '1:739431408047:web:d55cef541378d5b4014f5a',
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    window.location.href = 'home.html';
+  }
+});
+
+const loginForm = document.getElementById('loginForm');
+const loginError = document.getElementById('loginError');
+
+loginForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  loginError.textContent = '';
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      window.location.href = 'home.html';
+    })
+    .catch((e) => {
+      loginError.textContent = e.message;
+    });
+});

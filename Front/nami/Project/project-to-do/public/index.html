@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TODO-APP</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+  <main>
+    <img class="background-image" src="./image/background.png" alt="">
+    <div class="container">
+      <div class="header">
+        <div>TODO</div>
+        <img class="changes" src="./image/iconamoon_mode-dark-fill.svg" alt="">
+      </div>
+      <div class="input-container">
+        <input type="text" id="todoInput" class="todo-input" placeholder="Create a new todo.." />
+        <button id="addButton">Add Todo</button>
+      </div>
+      <div class="ul-background">
+        <img id="emptyStateImage" src="./image/Empty-state-illustration-LT.svg" alt="">
+        <p>You're todo's are empty</p>
+        <p>Please add first one</p>
+      </div>
+      <div>
+        <ul id="todo-list">
+        </ul>
+
+      </div>
+    </div>
+
+    <script type="module" src="./js/script.js" defer>
+    </script>
+    <script>
+      document.querySelector('.changes').addEventListener('click', function () {
+        const body = document.body;
+        const changesIcon = document.querySelector('.changes');
+        const emptyStateImage = document.getElementById('emptyStateImage');
+
+        if (body.classList.contains('dark')) {
+          // Switch to light mode
+          body.classList.remove('dark');
+          changesIcon.src = './image/iconamoon_mode-dark-fill.svg';
+          emptyStateImage.src = './image/Empty-state-illustration-LT.svg';
+        } else {
+          // Switch to dark mode
+          body.classList.add('dark');
+          changesIcon.src = './image/ic_round-light-mode.svg';
+          emptyStateImage.src = './image/Empty-state-illustration-DT.svg';
+        }
+      });
+    </script>
+  </main>
+</body>
+
+</html>

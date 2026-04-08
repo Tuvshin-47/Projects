@@ -1,0 +1,231 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  min-height: 100vh;
+}
+/* iblog logo heseg */
+.logo {
+  display: flex;
+  width: 100%;
+  height: 99px;
+  padding: 39px 48px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--Grey-Light-Grey-3, #e2e8ee);
+  background: #fff;
+}
+#logoTitle {
+  display: flex;
+  font-weight: 400;
+  font-size: 30px;
+  font-family: 'Okta Neue', sans-serif;
+}
+#logoTitle p:nth-child(2) {
+  color: #f77268;
+}
+#logoTitle p:last-child {
+  color: #fc9419;
+}
+#search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 572px;
+}
+.searchInput {
+  border-radius: 20px;
+  border: 1px solid #d2d8d4;
+  width: 100%;
+  height: 39px;
+  padding: 0px 40px 0px 25px;
+}
+.searchInput::placeholder {
+  color: #898886;
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 400;
+}
+.searchImage {
+  position: absolute;
+  right: 25px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+#buttonSign {
+  display: flex;
+  gap: 14px;
+}
+#buttonSign button:first-child {
+  border-radius: 10px;
+  border: 1px solid var(--Grey-Dark-Grey4, #dce3ea);
+  background: var(--Grey-Light-White, #fff);
+  display: flex;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #e86b02;
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21px;
+}
+#buttonSign button:last-child {
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: none;
+  background: #e86b02;
+  color: #fff;
+  font-family: 'Inter';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+}
+/* register form */
+.parentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.childContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 65px;
+  gap: 24px;
+}
+.childContainer {
+  width: fit-content;
+  margin: 90px auto;
+}
+.childContainer p:first-child {
+  color: #e86b02;
+  font-family: 'Inter';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+}
+
+.form-group input {
+  width: 478px;
+  height: 50px;
+  padding: 0px 24px;
+  margin-bottom: 24px;
+  border: none;
+  border-radius: 10px;
+  background: var(--Grey-Light-Grey-4, #f5f7f9);
+}
+
+#hide {
+  position: absolute;
+}
+
+#submit {
+  width: 100%;
+  height: 54px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background: #e86b02;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 500;
+}
+/* contact heseg */
+.contactContainer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 190px;
+  padding: 25px 65px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 160px;
+  border-top: 1px solid var(--Grey-Light-Grey-3, #e2e8ee);
+  background: #fff;
+}
+.logo3 {
+  color: #4d5a66;
+  font-family: 'Okta Neue', sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+}
+.help p:first-child {
+  color: var(--Secondary-800, #181a2a);
+  font-family: 'Inter';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+  margin-top: 5px;
+}
+.help p:not(:first-child):not(:last-child) {
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+.help p:not(:first-child):not(:last-child),
+.help p:last-child {
+  color: var(--Secondary-600, #3b3c4a);
+  font-family: 'Inter';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+.bidenteiHolbogdoh div:first-child {
+  color: var(--Secondary-800, #181a2a);
+  font-family: 'Inter';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+  margin-top: 5px;
+}
+.bidenteiHolbogdoh div:not(:first-child):not(:last-child) {
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+#usingFlex {
+  display: flex;
+  color: var(--Secondary-600, #3b3c4a);
+  font-family: 'Inter';
+  font-size: 14px;
+  gap: 2px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+.form-group label {
+  position: relative;
+  display: inline-block;
+}
+
+.form-group input[type='password'] {
+  padding-right: 30px; /* Ensure space for the icon within the input */
+}
+
+.form-group img {
+  position: absolute;
+  top: 35%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.form-group input {
+  border-radius: 10px;
+  background: #f5f7f9;
+}

@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "nippon-fall-2024-nami",
+    "staging": "nippon-fall-2024-nami"
+  },
+  "targets": {},
+  "etags": {}
+}

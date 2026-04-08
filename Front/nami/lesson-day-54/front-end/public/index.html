@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Register Account</h1>
+
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="email">
+          Email
+          <input type="email" id="email" required>
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="password">
+          Password
+          <input type="password" id="password" required>
+        </label>
+        <div id="passwordError" class="error"></div>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">
+          Confirm Password
+          <input type="password" id="confirmPassword" required>
+        </label>
+        <div id="confirmPasswordError" class="error"></div>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script type="module" src="./js/scripts.js"></script>
+</body>
+
+</html>

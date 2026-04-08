@@ -1,0 +1,25 @@
+.header {
+  text-align: center;
+}
+.profiles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.todos ul li:nth-child(2) {
+  text-decoration-line: line-through;
+}
+.ex01 .theme {
+  width: 300px;
+  height: 200px;
+  border-radius: 8px;
+}
+.ex01 .theme div:nth-child(1) {
+  font-size: 20px;
+  font-weight: 800;
+}
+.ex01 .theme img {
+  border-radius: 99px;
+  margin-top: 10px;
+}

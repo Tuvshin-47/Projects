@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/profile-updated.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.3/dist/umd/supabase.min.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="profile-card">
+        <div class="profile-header">
+          <div class="profile-avatar">
+            <img
+              id="profileImage"
+              src="https://placedog.net/640/480?r"
+              alt="Profile"
+              class="profile-image"
+            />
+            <label for="imageUpload" class="image-upload-label">+</label>
+            <input
+              type="file"
+              id="imageUpload"
+              class="image-upload-input"
+              accept="image/*"
+            />
+            <div class="loading-overlay" id="loadingOverlay">
+              <div class="spinner"></div>
+            </div>
+            <div class="upload-progress" id="uploadProgress"></div>
+          </div>
+          <div class="profile-email" id="profileEmail"></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/profile-updated.js"></script>
+  </body>
+</html>

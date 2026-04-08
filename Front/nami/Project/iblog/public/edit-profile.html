@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="css/edit-profile.css" />
+</head>
+
+<body>
+    <!-- logo -->
+    <div class="logo">
+        <div id="logoTitle">
+            <img class="logoImage" src="./img/logo.svg" alt="" />
+            <p>i</p>
+            <p>blog</p>
+        </div>
+        <div id="search">
+            <input class="searchInput" type="text" placeholder="Хайх" />
+            <img class="searchImage" src="./img/search-normal.svg" alt="" />
+        </div>
+        <div id="buttonSign">
+            <img src="./img/u_heart.svg" alt="">
+            <div class="register">
+                <a href="./profile.html">Post</a>
+                <img class="icon" src="./img/pen.png" alt="">
+            </div>
+            <div class="dropdown">
+                <img class="dropbtn" src="./img/u_user.svg" alt="">
+                <button class="dropbtn">Профайл</button>
+                <div class="dropdown-content">
+                    <a href="./edit-profile.html"><img src="./img/u_user.svg" alt="">Миний мэдээлэл</a>
+                    <a href="#"><img src="./img/u_heart.svg" alt="">Таалагдсан</a>
+                    <a href="#" id="logoutBtn"><img src="./img/fi_log-out.svg" alt="">Гарах</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- profile section -->
+    <div class="content">
+        <!-- profile -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar" id="profileAvatar"></div>
+                <div class="profile-email" id="profileEmail"></div>
+            </div>
+            <div class="Statics">
+                <div class="follower">
+                    <p>0</p>
+                    <p>Follows</p>
+                </div>
+                <div class="line"></div>
+                <div class="followers">
+                    <p>0</p>
+                    <p>Followers</p>
+                </div>
+                <div class="line"></div>
+                <div class="posts">
+                    <p>0</p>
+                    <p>Posts</p>
+                </div>
+            </div>
+            <div class="edit-profile">
+                <img src="./img/pen.png" alt="">
+                <a href="edit-profile.html">Профайл засах</a>
+            </div>
+        </div>
+        <!-- Profile edit section -->
+        <div class="column">
+            <div class="all">
+                <div class="pro-information">
+                    <img src="./img/u_user.svg" alt="">
+                    <p>Профайл мэдээлэл</p>
+                </div>
+                <div class="password-change">
+                    <img src="./img/u_key-skeleton.svg" alt="">
+                    <p>Нууц үг солих</p>
+                </div>
+            </div>
+            <!-- Add Avatar Upload Section -->
+            <div id="profile-inf">
+                <div class="addAvatar">
+                    <img id="profile-pic" src="./img/user.png" alt="">
+                    <label for="input-file">Зураг солих</label>
+                    <input type="file" id="input-file" accept="image/jpeg, image/jpg, image/png ">
+                </div>
+
+                <div class="changes">
+
+                    <div id="Change-Name">Нэр</div>
+                    <input type="text">
+                    <div id="Change-email">И-майл хаяг</div>
+                    <input type="text" id="email">
+                    <div id="saveButton">
+                        <button id="save">Хадгалах</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact section -->
+    <div class="contactContainer">
+        <div class="logo2">
+            <div id="logoTitle">
+                <img class="logoImage" src="./img/logo.svg" alt="" />
+                <p>i</p>
+                <p>blog</p>
+            </div>
+            <div class="logo3">
+                <p>Write,Read,Enjoy</p>
+            </div>
+        </div>
+        <div class="help">
+            <p>Тусламж</p>
+            <p>Хэрэглэх заавар</p>
+            <p>Санал хүсэлт</p>
+        </div>
+        <div class="bidenteiHolbogdoh">
+            <div>Бидэнтэй холбогдох</div>
+            <div id="usingFlex">
+                <img src="./img/fi_mail.svg" alt="" />
+                <p>info@jstemplate.net</p>
+            </div>
+            <div id="usingFlex">
+                <img src="./img/fi_phone.svg" alt="" />
+                <p>+976 99112344</p>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./js/edit-profile.js"></script>
+</body>
+
+</html>

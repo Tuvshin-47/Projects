@@ -1,0 +1,1 @@
+INDEX VERSION 1.134+/Users/ddam-m0063/Desktop/fullstack_fall_2024_nippon/nami/lesson-day-66/backend/bituun/.metadata/.plugins/org.eclipse.jdt.core

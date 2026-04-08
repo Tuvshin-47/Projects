@@ -1,0 +1,176 @@
+* {
+  font-family: 'Kanit', sans-serif;
+}
+body {
+  background: var(--Light-Gray, #e5e5e5);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body.dark {
+  background: var(--Dark-Blue-Gray, #181824);
+  color: #ffffff;
+}
+main {
+  width: 100%;
+  height: 100%;
+}
+.background-image {
+  display: flex;
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  height: 20%;
+}
+
+.container {
+  position: absolute;
+  width: 617px;
+  margin-top: -15%;
+  margin-left: 35%;
+}
+
+.header {
+  width: 617px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.header div {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: var(--White, #fff);
+}
+
+.input-container {
+  margin-top: 10px;
+  border-radius: 8px 8px 0px 0px;
+  background: var(--White, #fff);
+  box-shadow: 0px 4px 64px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  width: 618px;
+  height: 64px;
+}
+body.dark .input-container {
+  border-radius: 8px;
+  background: var(--Blue-Gray, #25273c);
+  box-shadow: 0px 4px 64px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+}
+input {
+  margin: 0 auto;
+  font-size: 18px;
+  width: 578px;
+  height: 40px;
+  position: relative;
+  border-radius: 999px;
+  border: 1px solid var(--dark-gray-32-opacity, rgba(33, 33, 33, 0.32));
+}
+body.dark input {
+  background: var(--Blue-Gray, #25273c);
+  box-shadow: 0px 4px 64px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  border: 1px solid var(--white-32-opacity, rgba(255, 255, 255, 0.32));
+}
+
+input[type='text'] {
+  padding-left: 20px;
+}
+input:focus {
+  outline: none;
+  border: 2px solid var(--Blue, #93a9ff);
+}
+button {
+  margin-left: 495px;
+  border-radius: 999px;
+  position: absolute;
+  padding: 8px 16px;
+  background: var(--Blue, #93a9ff);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 115px;
+  height: 45px;
+}
+
+.ul-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 702px;
+  width: 617px;
+  border-radius: 0 0px 8px 8px;
+  background: var(--White, #fff);
+  box-shadow: 0px 4px 64px 0px rgba(0, 0, 0, 0.25);
+}
+body.dark .ul-background {
+  background: var(--Blue-Gray, #25273c);
+  box-shadow: 0px 4px 64px 0px rgba(0, 0, 0, 0.25);
+}
+.ul-background p {
+  font-size: 24px;
+  font-weight: 400;
+}
+.ul-background p:last-child {
+  font-size: 18px;
+  font-weight: 400;
+}
+.ul-background img {
+  width: 153.563px;
+  height: 167.998px;
+}
+
+ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+body.dark li {
+  background: var(--Blue-Gray, #25273c);
+  box-shadow: 0px 4px 64px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: 2px solid var(--white-32-opacity, rgba(255, 255, 255, 0.32));
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #f9f9f9;
+}
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+body.dark #todo-list {
+  background: var(--Blue-Gray, #25273c);
+  box-shadow: 0px 4px 64px 0px rgba(0, 0, 0, 0.25);
+}
+#todo-list {
+  margin-top: 0;
+  height: 702px;
+  width: 617px;
+  border-radius: 0 0px 8px 8px;
+  background: var(--White, #fff);
+  box-shadow: 0px 4px 64px 0px rgba(0, 0, 0, 0.25);
+}
+body.dark #todoComplete {
+  color: var(--white-87-opacity, rgba(255, 255, 255, 0.87));
+}
+
+body.dark .delete-button {
+  background-color: var(--white-32-opacity, rgba(255, 255, 255, 0.32));
+}
+.delete-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+}
+.delete-button:hover {
+  background-color: var(--White, #fff);
+  cursor: pointer;
+}
