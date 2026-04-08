@@ -39,45 +39,46 @@ const Contact = ({ lang = 'mn' }) => {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div className="space-y-8">
-              <div className="flex items-start gap-5">
-                <div className="w-12 h-12 bg-blue-600/10 border border-blue-500/20 rounded-2xl flex items-center justify-center shrink-0">
+              <div className="flex items-start gap-5 group">
+                {/* Icon box - Orange border */}
+                <div className="w-12 h-12 bg-orange-600/10 border border-orange-500/20 rounded-2xl flex items-center justify-center shrink-0 group-hover:border-orange-500/50 transition-colors">
                   <span className="text-xl">📧</span>
                 </div>
                 <div>
-                  <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-1">{t.email}</p>
+                  <p className="text-xs font-black text-orange-500 uppercase tracking-widest mb-1">{t.email}</p>
                   <p className="text-white font-bold">stuvshinbayar630@gmail.com</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-5">
-                <div className="w-12 h-12 bg-blue-600/10 border border-blue-500/20 rounded-2xl flex items-center justify-center shrink-0">
+              <div className="flex items-start gap-5 group">
+                <div className="w-12 h-12 bg-orange-600/10 border border-orange-500/20 rounded-2xl flex items-center justify-center shrink-0 group-hover:border-orange-500/50 transition-colors">
                   <span className="text-xl">📍</span>
                 </div>
                 <div>
-                  <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-1">{t.location}</p>
+                  <p className="text-xs font-black text-orange-500 uppercase tracking-widest mb-1">{t.location}</p>
                   <p className="text-white font-bold">{t.locationDetail}</p>
                 </div>
               </div>
             </div>
 
-            {/* Simple Form UI */}
+            {/* Form UI - Orange focus */}
             <div className="space-y-4">
               <input 
                 type="text" 
                 placeholder={t.placeholderName}
-                className="w-full bg-[#161b22] border border-gray-800 rounded-2xl p-4 text-white focus:border-blue-500 outline-none transition-all"
+                className="w-full bg-[#161b22] border border-gray-800 rounded-2xl p-4 text-white focus:border-orange-500 outline-none transition-all placeholder:text-gray-600"
               />
               <input 
                 type="email" 
                 placeholder={t.placeholderEmail}
-                className="w-full bg-[#161b22] border border-gray-800 rounded-2xl p-4 text-white focus:border-blue-500 outline-none transition-all"
+                className="w-full bg-[#161b22] border border-gray-800 rounded-2xl p-4 text-white focus:border-orange-500 outline-none transition-all placeholder:text-gray-600"
               />
               <textarea 
                 placeholder={t.placeholderMessage}
                 rows="4"
-                className="w-full bg-[#161b22] border border-gray-800 rounded-2xl p-4 text-white focus:border-blue-500 outline-none transition-all"
+                className="w-full bg-[#161b22] border border-gray-800 rounded-2xl p-4 text-white focus:border-orange-500 outline-none transition-all placeholder:text-gray-600"
               ></textarea>
-              <button className="w-full py-4 bg-blue-600 text-white font-black rounded-2xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20">
+              <button className="w-full py-4 bg-orange-600 text-white font-black rounded-2xl hover:bg-orange-700 transition-all shadow-lg shadow-orange-500/20 active:scale-[0.98]">
                 {t.button}
               </button>
             </div>
