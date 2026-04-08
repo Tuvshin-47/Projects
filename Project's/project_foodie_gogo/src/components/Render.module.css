@@ -1,0 +1,92 @@
+/* Жагсаалтын ерөнхий гарчиг (Жишээ нь: 45 газраас захиалах) */
+.title {
+  color: var(--Black, #000);
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  padding-bottom: 24px;
+}
+
+/* Картуудыг барьж байгаа контейнер */
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Картууд хоорондын зай */
+  width: 100%;
+}
+
+/* Үндсэн Карт */
+.cardSecondContainer {
+  display: flex;
+  gap: 20px;
+  max-width: 875px; /* Хатуу width-ийг max-width болгов */
+  width: 100%;
+  min-height: 120px; /* Текст их болбол сунана */
+  border-radius: 16px;
+  background: var(--White, #fff);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08); /* Илүү зөөлөн сүүдэр */
+  transition: transform 0.2s ease;
+  overflow: hidden; /* Зургаа булангаар нь таслахын тулд */
+  cursor: pointer;
+}
+
+.cardSecondContainer:hover {
+  transform: translateY(-4px); /* Хулгана аваачихад дээшлэх эффект */
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Зураг */
+.foodImage {
+  width: 180px;
+  min-width: 180px; /* Зураг шахагдахаас сэргийлнэ */
+  height: 120px;
+  object-fit: cover; /* Зургийг сунгахгүйгээр гоё харагдуулна */
+}
+
+/* Карт доторх текстэн мэдээлэл */
+.cardTextContent {
+  padding: 16px; /* Бүх талаас нь жигд зай авна */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.placeName {
+  color: var(--Black, #000);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.name {
+  color: var(--Gray-400, #676767);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.information {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-black, #1F2937);
+  font-weight: 500;
+}
+
+/* 📱 Гар утасны засвар */
+@media (max-width: 600px) {
+  .cardSecondContainer {
+    flex-direction: column; /* Зураг нь дээрээ, текст нь доороо болно */
+    height: auto;
+  }
+  
+  .foodImage {
+    width: 100%;
+    height: 160px; /* Утас дээр зураг илүү тод харагдана */
+  }
+
+  .cardTextContent {
+    padding: 15px;
+  }
+}

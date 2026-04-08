@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .capital {
+        text-transform: capitalize;
+      }
+      li > a {
+        text-decoration: none;
+      }
+
+      #left {
+        text-align: left;
+      }
+      #right {
+        text-align: right;
+      }
+      #justify {
+        text-align: justify;
+      }
+      #center {
+        text-align: center;
+      }
+
+      .indent {
+        text-indent: 100px;
+      }
+      .minus-indent {
+        text-indent: -99px;
+      }
+
+      #shadow {
+        text-shadow: 1px 1px 2px #d84141;
+      }
+      #negative {
+        text-shadow: -1px -1px 3px #3c41bc;
+      }
+      /* pseudo class */
+      p.intro::first-letter {
+        font-size: 400%;
+      }
+      p.intro::first-line {
+        font-weight: 700;
+        font-style: italic;
+      }
+      p.hover:hover {
+        font-size: 150%;
+        color: blueviolet;
+        font-weight: 600;
+        font-style: oblique;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Text</h1>
+
+    <p class="capital">
+      lorem ipsum dolor sit amet consectetur adipisicing elit. vitae facilis
+      cupiditate quia magni voluptatum explicabo commodi velit omnis unde eos
+      natus culpa ratione repudiandae nulla doloremque reiciendis, ex iste autem
+      at ea ipsam. ad enim, veniam quasi quisquam minus natus!
+    </p>
+
+    <h1>CSS Text Decoration</h1>
+
+    <div>
+      <ul>
+        <li>
+          <a href="https://google.com">Google.com</a>
+        </li>
+        <li>
+          <a href="https://apple.com">Apple.com</a>
+        </li>
+      </ul>
+    </div>
+
+    <h1 style="text-align: center">Text Align</h1>
+
+    <p id="left">Lorem ipsum dolor sit amet.</p>
+    <p id="right">Lorem ipsum dolor sit amet.</p>
+    <p id="center">Lorem ipsum dolor sit amet.</p>
+    <p id="justify">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa, fugiat
+      eaque. Porro autem quas voluptatem similique ratione ab vitae tempore
+      numquam. Mollitia numquam nostrum perspiciatis autem incidunt dolore
+      aperiam corrupti!
+    </p>
+
+    <h1>Text Indent</h1>
+    <p class="indent">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nemo!
+    </p>
+    <p class="minus-indent">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio vitae sed
+      necessitatibus eveniet consequuntur, placeat doloribus maxime
+      exercitationem, ducimus aspernatur recusandae adipisci laudantium corrupti
+      eos minima, similique et odio quam.
+    </p>
+
+    <h1>Text Shadow</h1>
+
+    <p id="shadow">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+      voluptate perspiciatis laborum nesciunt atque itaque mollitia, quam
+      adipisci. Placeat numquam maxime ullam provident quae voluptate ipsa
+      debitis laborum, incidunt possimus.
+    </p>
+    <p id="negative">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magnam
+      repellendus, quas accusantium assumenda laborum nisi ducimus suscipit
+      voluptate accusamus voluptatibus consequuntur omnis dolores, dolore
+      soluta. Adipisci quaerat eum molestiae.
+    </p>
+
+    <h1>First letter, First Line Pseudo Class</h1>
+    <p class="intro">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum magnam
+      rem ex corrupti, porro dignissimos enim facere accusantium ratione culpa
+      id quas nulla excepturi dicta consectetur beatae fugiat ducimus
+      necessitatibus!
+    </p>
+    <p class="hover">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste,
+      asperiores.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1200">
+  <!-- Background -->
+  <rect width="1500" height="1200" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="750" y="40" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle">School Management System: Extended ERD</text>
+  
+  <!-- STUDENTS Entity -->
+  <rect x="300" y="100" width="200" height="200" fill="#cfe2ff" stroke="#0d6efd" stroke-width="2" rx="5" />
+  <line x1="300" y1="140" x2="500" y2="140" stroke="#0d6efd" stroke-width="2" />
+  <text x="350" y="125" font-family="Arial" font-size="18" font-weight="bold">STUDENTS</text>
+  <text x="310" y="165" font-family="Arial" font-size="14">PK student_id</text>
+  <text x="310" y="190" font-family="Arial" font-size="14">first_name</text>
+  <text x="310" y="215" font-family="Arial" font-size="14">last_name</text>
+  <text x="310" y="240" font-family="Arial" font-size="14">date_of_birth</text>
+  <text x="310" y="265" font-family="Arial" font-size="14">gender</text>
+  <text x="310" y="290" font-family="Arial" font-size="14">FK parent_id</text>
+  <text x="310" y="315" font-family="Arial" font-size="14">FK class_id</text>
+  
+  <!-- PARENTS Entity (NEW) -->
+  <rect x="50" y="100" width="200" height="180" fill="#cfe2ff" stroke="#0d6efd" stroke-width="2" rx="5" />
+  <line x1="50" y1="140" x2="250" y2="140" stroke="#0d6efd" stroke-width="2" />
+  <text x="100" y="125" font-family="Arial" font-size="18" font-weight="bold">PARENTS</text>
+  <text x="60" y="165" font-family="Arial" font-size="14">PK parent_id</text>
+  <text x="60" y="190" font-family="Arial" font-size="14">first_name</text>
+  <text x="60" y="215" font-family="Arial" font-size="14">last_name</text>
+  <text x="60" y="240" font-family="Arial" font-size="14">relationship</text>
+  <text x="60" y="265" font-family="Arial" font-size="14">phone_number</text>
+  <text x="60" y="290" font-family="Arial" font-size="14">email</text>
+  
+  <!-- TEACHERS Entity -->
+  <rect x="1100" y="100" width="200" height="200" fill="#d8f3dc" stroke="#198754" stroke-width="2" rx="5" />
+  <line x1="1100" y1="140" x2="1300" y2="140" stroke="#198754" stroke-width="2" />
+  <text x="1150" y="125" font-family="Arial" font-size="18" font-weight="bold">TEACHERS</text>
+  <text x="1110" y="165" font-family="Arial" font-size="14">PK teacher_id</text>
+  <text x="1110" y="190" font-family="Arial" font-size="14">first_name</text>
+  <text x="1110" y="215" font-family="Arial" font-size="14">last_name</text>
+  <text x="1110" y="240" font-family="Arial" font-size="14">specialization</text>
+  <text x="1110" y="265" font-family="Arial" font-size="14">employment_date</text>
+  <text x="1110" y="290" font-family="Arial" font-size="14">contact_info</text>
+  <text x="1110" y="315" font-family="Arial" font-size="14">FK department_id</text>
+  
+  <!-- DEPARTMENTS Entity (NEW) -->
+  <rect x="1350" y="100" width="200" height="160" fill="#d8f3dc" stroke="#198754" stroke-width="2" rx="5" />
+  <line x1="1350" y1="140" x2="1550" y2="140" stroke="#198754" stroke-width="2" />
+  <text x="1400" y="125" font-family="Arial" font-size="18" font-weight="bold">DEPARTMENTS</text>
+  <text x="1360" y="165" font-family="Arial" font-size="14">PK department_id</text>
+  <text x="1360" y="190" font-family="Arial" font-size="14">department_name</text>
+  <text x="1360" y="215" font-family="Arial" font-size="14">description</text>
+  <text x="1360" y="240" font-family="Arial" font-size="14">FK dept_head_id</text>
+  
+  <!-- CLASSES Entity -->
+  <rect x="700" y="100" width="200" height="160" fill="#e2d9f3" stroke="#6f42c1" stroke-width="2" rx="5" />
+  <line x1="700" y1="140" x2="900" y2="140" stroke="#6f42c1" stroke-width="2" />
+  <text x="750" y="125" font-family="Arial" font-size="18" font-weight="bold">CLASSES</text>
+  <text x="710" y="165" font-family="Arial" font-size="14">PK class_id</text>
+  <text x="710" y="190" font-family="Arial" font-size="14">class_name</text>
+  <text x="710" y="215" font-family="Arial" font-size="14">grade_level</text>
+  <text x="710" y="240" font-family="Arial" font-size="14">academic_year</text>
+  <text x="710" y="265" font-family="Arial" font-size="14">FK homeroom_teacher_id</text>
+  
+  <!-- CLASSROOMS Entity -->
+  <rect x="700" y="350" width="200" height="160" fill="#fff3cd" stroke="#ffc107" stroke-width="2" rx="5" />
+  <line x1="700" y1="390" x2="900" y2="390" stroke="#ffc107" stroke-width="2" />
+  <text x="750" y="375" font-family="Arial" font-size="18" font-weight="bold">CLASSROOMS</text>
+  <text x="710" y="415" font-family="Arial" font-size="14">PK classroom_id</text>
+  <text x="710" y="440" font-family="Arial" font-size="14">room_number</text>
+  <text x="710" y="465" font-family="Arial" font-size="14">building</text>
+  <text x="710" y="490" font-family="Arial" font-size="14">floor</text>
+  <text x="710" y="515" font-family="Arial" font-size="14">capacity</text>
+  
+  <!-- COURSES Entity (NEW) -->
+  <rect x="1100" y="350" width="200" height="180" fill="#fff3cd" stroke="#ffc107" stroke-width="2" rx="5" />
+  <line x1="1100" y1="390" x2="1300" y2="390" stroke="#ffc107" stroke-width="2" />
+  <text x="1150" y="375" font-family="Arial" font-size="18" font-weight="bold">COURSES</text>
+  <text x="1110" y="415" font-family="Arial" font-size="14">PK course_id</text>
+  <text x="1110" y="440" font-family="Arial" font-size="14">course_name</text>
+  <text x="1110" y="465" font-family="Arial" font-size="14">course_code</text>
+  <text x="1110" y="490" font-family="Arial" font-size="14">credit_hours</text>
+  <text x="1110" y="515" font-family="Arial" font-size="14">description</text>
+  <text x="1110" y="540" font-family="Arial" font-size="14">FK department_id</text>
+  
+  <!-- CLASS_SCHEDULES Entity -->
+  <rect x="700" y="700" width="200" height="220" fill="#f8d7da" stroke="#dc3545" stroke-width="2" rx="5" />
+  <line x1="700" y1="740" x2="900" y2="740" stroke="#dc3545" stroke-width="2" />
+  <text x="740" y="725" font-family="Arial" font-size="18" font-weight="bold">CLASS_SCHEDULES</text>
+  <text x="710" y="765" font-family="Arial" font-size="14">PK schedule_id</text>
+  <text x="710" y="790" font-family="Arial" font-size="14">FK student_id</text>
+  <text x="710" y="815" font-family="Arial" font-size="14">FK classroom_id</text>
+  <text x="710" y="840" font-family="Arial" font-size="14">FK class_id</text>
+  <text x="710" y="865" font-family="Arial" font-size="14">FK teacher_id</text>
+  <text x="710" y="890" font-family="Arial" font-size="14">FK course_id</text>
+  <text x="710" y="915" font-family="Arial" font-size="14">day_of_week</text>
+  <text x="710" y="940" font-family="Arial" font-size="14">start_time/end_time</text>
+  
+  <!-- Relationship: STUDENTS to PARENTS -->
+  <path d="M 300,290 L 250,230" stroke="#0d6efd" stroke-width="2" fill="none" />
+  <circle cx="250" cy="230" r="5" fill="#0d6efd" />
+  <text x="260" y="270" font-family="Arial" font-size="14" font-weight="bold">has_guardian</text>
+  <text x="285" y="280" font-family="Arial" font-size="12">N</text>
+  <text x="255" y="240" font-family="Arial" font-size="12">1</text>
+  
+  <!-- Relationship: STUDENTS to CLASSES -->
+  <path d="M 500,200 L 700,200" stroke="#6f42c1" stroke-width="2" fill="none" />
+  <circle cx="500" cy="200" r="5" fill="#6f42c1" />
+  <text x="580" y="180" font-family="Arial" font-size="14" font-weight="bold">belongs_to</text>
+  <text x="515" y="190" font-family="Arial" font-size="12">N</text>
+  <text x="680" y="190" font-family="Arial" font-size="12">1</text>
+  
+  <!-- Relationship: STUDENTS to CLASS_SCHEDULES -->
+  <path d="M 400,300 L 400,600 L 700,790" stroke="#f8d7da" stroke-width="2" fill="none" />
+  <circle cx="700" cy="790" r="5" fill="#f8d7da" />
+  <text x="500" y="700" font-family="Arial" font-size="14" font-weight="bold">attends</text>
+  <text x="410" y="320" font-family="Arial" font-size="12">1</text>
+  <text x="680" y="780" font-family="Arial" font-size="12">N</text>
+  
+  <!-- Relationship: TEACHERS to DEPARTMENTS -->
+  <path d="M 1300,290 L 1350,220" stroke="#198754" stroke-width="2" fill="none" />
+  <circle cx="1300" cy="290" r="5" fill="#198754" />
+  <text x="1320" y="270" font-family="Arial" font-size="14" font-weight="bold">belongs_to</text>
+  <text x="1315" y="280" font-family="Arial" font-size="12">N</text>
+  <text x="1340" y="220" font-family="Arial" font-size="12">1</text>
+  
+  <!-- Relationship: DEPARTMENTS to TEACHERS (for head) -->
+  <path d="M 1450,240 L 1450,320 L 1300,320" stroke="#198754" stroke-width="2" stroke-dasharray="5,5" fill="none" />
+  <circle cx="1300" cy="320" r="5" fill="#198754" />
+  <text x="1380" y="340" font-family="Arial" font-size="14" font-weight="bold">headed_by</text>
+  <text x="1450" y="260" font-family="Arial" font-size="12">1</text>
+  <text x="1320" y="310" font-family="Arial" font-size="12">1</text>
+  
+  <!-- Relationship: TEACHERS to CLASSES -->
+  <path d="M 1100,200 L 900,200" stroke="#198754" stroke-width="2" fill="none" />
+  <circle cx="900" cy="200" r="5" fill="#198754" />
+  <text x="950" y="180" font-family="Arial" font-size="14" font-weight="bold">is_homeroom_for</text>
+  <text x="1080" y="190" font-family="Arial" font-size="12">1</text>
+  <text x="910" y="190" font-family="Arial" font-size="12">N</text>
+  
+  <!-- Relationship: TEACHERS to CLASS_SCHEDULES -->
+  <path d="M 1200,300 L 1200,600 L 900,865" stroke="#198754" stroke-width="2" fill="none" />
+  <circle cx="900" cy="865" r="5" fill="#198754" />
+  <text x="1100" y="700" font-family="Arial" font-size="14" font-weight="bold">teaches</text>
+  <text x="1210" y="320" font-family="Arial" font-size="12">1</text>
+  <text x="910" y="855" font-family="Arial" font-size="12">N</text>
+  
+  <!-- Relationship: CLASSES to STUDENTS -->
+  <path d="M 700,250 L 500,250" stroke="#6f42c1" stroke-width="2" fill="none" />
+  <circle cx="700" cy="250" r="5" fill="#6f42c1" />
+  <text x="580" y="230" font-family="Arial" font-size="14" font-weight="bold">contains</text>
+  <text x="515" y="240" font-family="Arial" font-size="12">N</text>
+  <text x="680" y="240" font-family="Arial" font-size="12">1</text>
+  
+  <!-- Relationship: CLASSES to CLASS_SCHEDULES -->
+  <path d="M 800,260 L 800,600 L 800,700" stroke="#6f42c1" stroke-width="2" fill="none" />
+  <circle cx="800" cy="700" r="5" fill="#6f42c1" />
+  <text x="810" y="500" font-family="Arial" font-size="14" font-weight="bold">schedules</text>
+  <text x="810" y="280" font-family="Arial" font-size="12">1</text>
+  <text x="810" y="680" font-family="Arial" font-size="12">N</text>
+  
+  <!-- Relationship: CLASSROOMS to CLASS_SCHEDULES -->
+  <path d="M 800,510 L 800,600 L 800,700" stroke="#ffc107" stroke-width="2" fill="none" />
+  <circle cx="800" cy="700" r="5" fill="#ffc107" />
+  <text x="730" y="600" font-family="Arial" font-size="14" font-weight="bold">hosts</text>
+  <text x="810" y="530" font-family="Arial" font-size="12">1</text>
+  <text x="780" y="680" font-family="Arial" font-size="12">N</text>
+  
+  <!-- Relationship: DEPARTMENTS to COURSES -->
+  <path d="M 1450,260 L 1450,490 L 1300,490" stroke="#ffc107" stroke-width="2" fill="none" />
+  <circle cx="1300" cy="490" r="5" fill="#ffc107" />
+  <text x="1380" y="450" font-family="Arial" font-size="14" font-weight="bold">offers</text>
+  <text x="1460" y="280" font-family="Arial" font-size="12">1</text>
+  <text x="1320" y="480" font-family="Arial" font-size="12">N</text>
+  
+  <!-- Relationship: COURSES to CLASS_SCHEDULES -->
+  <path d="M 1200,530 L 1200,600 L 900,890" stroke="#ffc107" stroke-width="2" fill="none" />
+  <circle cx="900" cy="890" r="5" fill="#ffc107" />
+  <text x="1050" y="750" font-family="Arial" font-size="14" font-weight="bold">taught_in</text>
+  <text x="1210" y="550" font-family="Arial" font-size="12">1</text>
+  <text x="910" y="880" font-family="Arial" font-size="12">N</text>
+  
+  <!-- Legend -->
+  <rect x="300" y="1000" width="900" height="150" fill="white" stroke="black" stroke-width="1" rx="5" />
+  <text x="750" y="1030" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">Legend</text>
+  
+  <rect x="350" y="1050" width="20" height="20" fill="#cfe2ff" stroke="#0d6efd" stroke-width="1" />
+  <text x="380" y="1065" font-family="Arial" font-size="14">Student-related entities</text>
+  
+  <rect x="350" y="1080" width="20" height="20" fill="#d8f3dc" stroke="#198754" stroke-width="1" />
+  <text x="380" y="1095" font-family="Arial" font-size="14">Teacher-related entities</text>
+  
+  <rect x="350" y="1110" width="20" height="20" fill="#e2d9f3" stroke="#6f42c1" stroke-width="1" />
+  <text x="380" y="1125" font-family="Arial" font-size="14">Class entities</text>
+  
+  <rect x="600" y="1050" width="20" height="20" fill="#fff3cd" stroke="#ffc107" stroke-width="1" />
+  <text x="630" y="1065" font-family="Arial" font-size="14">Resource entities</text>
+  
+  <rect x="600" y="1080" width="20" height="20" fill="#f8d7da" stroke="#dc3545" stroke-width="1" />
+  <text x="630" y="1095" font-family="Arial" font-size="14">Junction entities</text>
+  
+  <line x1="600" y1="1110" x2="630" y2="1110" stroke="black" stroke-width="2" />
+  <circle cx="600" cy="1110" r="5" fill="black" />
+  <text x="640" y="1115" font-family="Arial" font-size="14">One-to-many</text>
+  
+  <line x1="850" y1="1050" x2="880" y2="1050" stroke="black" stroke-width="2" stroke-dasharray="5,5" />
+  <circle cx="880" cy="1050" r="5" fill="black" />
+  <text x="890" y="1055" font-family="Arial" font-size="14">Optional relationship</text>
+  
+  <text x="850" y="1080" font-family="Arial" font-size="12">PK - Primary Key</text>
+  <text x="850" y="1110" font-family="Arial" font-size="12">FK - Foreign Key</text>
+  
+  <text x="970" y="1080" font-family="Arial" font-size="12">1 - One record</text>
+  <text x="970" y="1110" font-family="Arial" font-size="12">N - Many records</text>
+</svg>

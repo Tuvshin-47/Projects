@@ -1,0 +1,16 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+#inline-example{
+    width: 500px;
+    margin: 0 auto;
+}
+
+#inline-example div {
+    height: 40px;
+    display: inline-block;
+    background-color: aquamarine;
+}
+

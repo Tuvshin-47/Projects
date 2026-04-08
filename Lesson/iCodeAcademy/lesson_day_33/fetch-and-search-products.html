@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бүтээгдэхүүн хайх</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        .results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .loading {
+            text-align: center;
+            font-size: 1.2em;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Бүтээгдэхүүний нэрээр хайх...">
+            <button id="searchButton">Хайх</button>
+        </div>
+        <div id="results" class="results"></div>
+    </div>
+
+    <script>
+        let globalData = [];
+        const loadingText = 'Уншиж байна...';
+
+        async function fetchData(searchTerm = '') {
+            try {
+                const resultsDiv = document.getElementById('results');
+                resultsDiv.innerHTML = `<div class="loading">${loadingText}</div>`;
+
+                const response = await fetch(`https://dummyjson.com/products/search?q=${searchTerm}`);
+                const data = await response.json();
+                globalData = data.products; // DummyJSON API returns {products: [...]}
+                displayData(globalData);
+            } catch (error) {
+                console.error('Өгөгдөл татахад алдаа гарлаа:', error);
+                document.getElementById('results').innerHTML =
+                    '<div class="loading">Алдаа гарлаа. Дахин оролдоно уу.</div>';
+            }
+        }
+
+        function displayData(products) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            if (products.length === 0) {
+                resultsDiv.innerHTML = '<div class="loading">Бүтээгдэхүүн олдсонгүй</div>';
+                return;
+            }
+
+            products.forEach(product => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'item';
+                itemDiv.innerHTML = `
+                    <img src="${product.thumbnail}" alt="${product.title}">
+                    <h3>${product.title}</h3>
+                    <p>Үнэ: $${product.price}</p>
+                    <p>Брэнд: ${product.brand}</p>
+                    <p>Ангилал: ${product.category}</p>
+                    <p>Үнэлгээ: ${product.rating}/5</p>
+                    <p>${product.description}</p>
+                `;
+                resultsDiv.appendChild(itemDiv);
+            });
+        }
+
+        function debounce(func, timeout = 300) {
+            let timer;
+            return (...args) => {
+                clearTimeout(timer);
+                timer = setTimeout(() => func.apply(this, args), timeout);
+            };
+        }
+
+        const searchData = () => {
+            const searchTerm = document.getElementById('searchInput').value;
+            fetchData(searchTerm);
+        };
+
+        // Event listeners
+        const debouncedSearch = debounce(searchData);
+        document.getElementById('searchButton').addEventListener('click', searchData);
+        document.getElementById('searchInput').addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                searchData();
+            } else {
+                debouncedSearch();
+            }
+        });
+
+        // Анхны өгөгдөл татах
+        fetchData();
+    </script>
+</body>
+
+</html>

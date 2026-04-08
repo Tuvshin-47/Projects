@@ -1,0 +1,98 @@
+erDiagram
+    %% Student-related entities
+    STUDENTS }o--|| PARENTS : has_guardian
+    STUDENTS }o--|| CLASSES : belongs_to
+    STUDENTS ||--o{ CLASS_SCHEDULES : attends
+    
+    PARENTS {
+        int parent_id PK
+        string first_name
+        string last_name
+        string relationship
+        string phone_number
+        string email
+    }
+    
+    STUDENTS {
+        int student_id PK
+        string first_name
+        string last_name
+        date date_of_birth
+        string gender
+        int parent_id FK
+        int class_id FK
+    }
+    
+    %% Teacher-related entities
+    TEACHERS }o--|| DEPARTMENTS : belongs_to
+    TEACHERS ||--o{ CLASSES : is_homeroom_for
+    TEACHERS ||--o{ CLASS_SCHEDULES : teaches
+    
+    DEPARTMENTS ||--o{ COURSES : offers
+    DEPARTMENTS }o--|| TEACHERS : headed_by
+    
+    TEACHERS {
+        int teacher_id PK
+        string first_name
+        string last_name
+        string specialization
+        date employment_date
+        string contact_info
+        int department_id FK
+    }
+    
+    DEPARTMENTS {
+        int department_id PK
+        string department_name
+        string description
+        int dept_head_id FK
+    }
+    
+    %% Class-related entities
+    CLASSES ||--o{ STUDENTS : contains
+    CLASSES }o--|| TEACHERS : has_homeroom_teacher
+    CLASSES ||--o{ CLASS_SCHEDULES : schedules
+    
+    CLASSES {
+        int class_id PK
+        string class_name
+        int grade_level
+        int academic_year
+        int homeroom_teacher_id FK
+    }
+    
+    %% Resource entities
+    CLASSROOMS ||--o{ CLASS_SCHEDULES : hosts
+    
+    CLASSROOMS {
+        int classroom_id PK
+        string room_number
+        string building
+        string floor
+        int capacity
+    }
+    
+    COURSES }o--|| DEPARTMENTS : belongs_to
+    COURSES ||--o{ CLASS_SCHEDULES : taught_in
+    
+    COURSES {
+        int course_id PK
+        string course_name
+        string course_code
+        int credit_hours
+        string description
+        int department_id FK
+    }
+    
+    %% Junction entity
+    CLASS_SCHEDULES {
+        int schedule_id PK
+        int student_id FK
+        int classroom_id FK
+        int class_id FK
+        int teacher_id FK
+        int course_id FK
+        string day_of_week
+        time start_time
+        time end_time
+    }

@@ -1,0 +1,37 @@
+h1 {
+    text-align: center;
+}
+
+div {
+    height: 200px;
+    width: 200px;
+}
+
+#absolute {
+    background-color: gray;
+    position: absolute;
+    top: 10px;
+    right: 200px;
+}
+
+#relative {
+    background-color: tomato;
+    position: relative;
+    top: 10px;
+    left: 200px;
+}
+
+#parent {
+    background-color: aqua;
+    position: relative
+}
+
+
+#child {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}

@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+}
+h1{
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    background-color: burlywood;
+    color: turquoise;
+
+    /* fixed position */
+    position: fixed;
+    top: 0;
+    z-index: 4;
+
+}
+
+p {
+    position: relative;
+    z-index: 3;
+}
+main {
+    width: 800px;
+    margin: 0 auto;
+    font-size: 40px;
+    background-color: green;
+}

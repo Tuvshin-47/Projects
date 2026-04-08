@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-button:hover {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Modal ашиглах товч -->
+    <button id="openModalBtn">Модал цонх нээх</button>
+
+    <!-- Modal цонх -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Модал цонхны гарчиг</h2>
+            <p>Энэ бол модал цонхны агуулга.</p>
+        </div>
+    </div>
+
+    <script>
+        // DOM элементүүдийг авах
+        const modal = document.getElementById("myModal");
+        const btn = document.getElementById("openModalBtn");
+        const closeBtn = document.getElementsByClassName("close-button")[0];
+
+        // Modal нээх функц
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // X товчлуур дээр дарахад хаах
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Modal гадна талд дарахад хаах
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+/* Container */
+.divRating {
+  display: flex;
+  color: var(--Black, #000);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  max-width: 1168px; /* Fixed width-ийг max-width болгов */
+  width: 100%;
+  min-height: 100vh; /* Хатуу 2000px-ийг уян хатан болгов */
+  margin: 0 auto;
+  border-radius: 16px 16px 0px 0px;
+  background: var(--Gray-100, #f8f8f8);
+}
+
+/* Rating column */
+.ratingColumn {
+  margin-top: 24px;
+  margin-left: 31px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+/* Toggle button row */
+.ratingFlex {
+  gap: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Star rating */
+.image {
+  display: flex;
+  gap: 4px;
+}
+
+/* Search container */
+.searchContainer {
+  margin-top: 24px;
+  margin-left: 40px;
+  position: relative;
+  flex-grow: 1; /* Хайлтын хэсэг үлдсэн зайг авна */
+}
+
+.searchContainerImg {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.searchContainerInput {
+  max-width: 583px;
+  width: 100%;
+  height: 40px;
+  padding-left: 45px;
+  font-size: 16px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--Blue-Gray, #e3e8eb);
+  outline: none;
+  transition: border 0.3s;
+}
+
+.searchContainerInput:focus {
+  border: 1px solid var(--Green, #0fa958);
+}
+
+.searchContainerInput::placeholder {
+  color: #888;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Dropdown */
+.dropdownWrapper {
+  position: relative;
+  margin-top: 24px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.dropdown {
+  border-radius: 999px;
+  background: var(--Blue-Gray, #e3e8eb);
+  width: 240px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown content */
+.dropdownContent {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  display: flex;
+  width: 295px;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 12px;
+  background: var(--White, #fff);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+}
+
+.dropdownItem {
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--Black, #000);
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+.dropdownItem:last-child {
+  border-bottom: none;
+}
+
+.cancelApply {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.apply {
+  padding: 8px 24px;
+  border: none;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 999px;
+  background: var(--Green, #0fa958);
+  cursor: pointer;
+}
+
+/* Results Area */
+.searchRecommend {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.category {
+  padding: 32px 40px;
+  width: 100%;
+  height: auto;
+}
+
+.categoryItem {
+  max-width: 847px;
+  width: 100%;
+  height: auto;
+  min-height: 120px;
+  border-radius: 16px;
+  background: var(--White, #fff);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+  display: flex;
+  gap: 20px;
+  overflow: hidden; /* Зураг ирмэгээсээ гарахгүй байх */
+}
+
+.foodImage {
+  width: 180px;
+  height: 120px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  color: var(--Black, #000);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.name {
+  color: var(--Gray-400, #676767);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.bigTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.information {
+  margin-top: 8px;
+  display: flex;
+  font-size: 14px;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Empty State */
+.noResults {
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ResetButton {
+  padding: 10px 25px;
+  border-radius: 999px;
+  background: var(--Green, #0fa958);
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: transform 0.2s;
+}
+
+.ResetButton:hover {
+  transform: translateY(-2px);
+}

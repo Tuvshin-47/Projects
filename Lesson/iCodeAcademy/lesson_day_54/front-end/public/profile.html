@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="./css/profile.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>User Profile</h1>
+        <div class="nav-links">
+            <a href="posts.html">My Posts</a>
+            <a href="home.html">Home</a>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar" id="profileAvatar">
+                </div>
+                <div class="image-upload-container">
+                    <!-- <img id="profileImage" src="https://placehold.co/600x400" alt="Profile" class="profile-image"> -->
+                    <label for="imageUpload" class="image-upload-label">
+                        <span>+</span>
+                    </label>
+                    <input type="file" id="imageUpload" class="image-upload-input" accept="image/*">
+                    <div class="loading-overlay" id="loadingOverlay">
+                        <div class="spinner"></div>
+                    </div>
+                    <div class="upload-progress" id="uploadProgress"></div>
+                </div>
+                <div class="profile-email" id="profileEmail"></div>
+            </div>
+
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="displayName">Display Name</label>
+                    <input type="text" id="displayName" name="displayName">
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber">
+                </div>
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <input type="text" id="bio" name="bio">
+                </div>
+                <button type="submit" id="saveButton">Save Profile</button>
+            </form>
+
+            <div id="message"></div>
+
+            <div class="profile-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="postsCount">0</div>
+                    <div class="stat-label">Posts</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="joinDate">-</div>
+                    <div class="stat-label">Joined</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="lastActive">-</div>
+                    <div class="stat-label">Last Active</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./js/profile.js"></script>
+</body>
+
+</html>

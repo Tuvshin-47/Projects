@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/side.css">
+</head>
+
+<body>
+    <button onclick="openPanel()">Open Panel</button>
+
+    <div id="overlay" class="overlay" onclick="closePanel()"></div>
+
+    <div id="side-panel" class="side-panel">
+        <button class="close-button" onclick="closePanel()">Close Panel</button>
+        <div class="checkbox-container">
+            <!-- (div.item>label>input)*3 -->
+            <div class="item">
+                <label for="option1">
+                    Option 01
+                    <input type="checkbox" id="option1">
+                </label>
+            </div>
+            <div class="item">
+                <label for="option2">
+                    Option 02
+                    <input type="checkbox" id="option2">
+                </label>
+            </div>
+            <div class="item">
+                <label for="option3">
+                    Option 03
+                    <input type="checkbox" id="option3">
+                </label>
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/side.js"></script>
+</body>
+
+</html>

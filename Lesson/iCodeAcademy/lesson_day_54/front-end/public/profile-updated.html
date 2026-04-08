@@ -1,0 +1,238 @@
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.3/dist/umd/supabase.min.js"></script>
+    <style>
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #4285f4;
+        }
+
+        .image-upload-label {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #4285f4;
+            color: white;
+            padding: 5px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .image-upload-input {
+            display: none;
+        }
+
+        .upload-progress {
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 12px;
+            color: #4285f4;
+        }
+
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        .loading-overlay.active {
+            display: flex;
+        }
+
+        .spinner {
+            width: 30px;
+            height: 30px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #4285f4;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Add your other existing styles here */
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img id="profileImage" src="https://via.placeholder.com/150" alt="Profile" class="profile-image">
+                    <label for="imageUpload" class="image-upload-label">+</label>
+                    <input type="file" id="imageUpload" class="image-upload-input" accept="image/*">
+                    <div class="loading-overlay" id="loadingOverlay">
+                        <div class="spinner"></div>
+                    </div>
+                    <div class="upload-progress" id="uploadProgress"></div>
+                </div>
+                <div class="profile-email" id="profileEmail"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+        import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
+
+        // Your Firebase configuration
+        const firebaseConfig = {
+            // Add your Firebase config here
+            
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        // Initialize Supabase
+        const supabaseUrl = 'API';
+        const supabaseKey = 'KEY';
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+        let currentUser = null;
+
+        // Handle image upload
+        async function handleImageUpload(file) {
+            const progressElement = document.getElementById('uploadProgress');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            const profileImage = document.getElementById('profileImage');
+
+            try {
+                // Show loading state
+                loadingOverlay.classList.add('active');
+                progressElement.textContent = 'Uploading...';
+
+                // Validate file
+                if (!file.type.startsWith('image/')) {
+                    throw new Error('Please upload an image file');
+                }
+
+                if (file.size > 5 * 1024 * 1024) { // 5MB limit
+                    throw new Error('File size should be less than 5MB');
+                }
+
+                // Create unique filename
+                const fileExt = file.name.split('.').pop();
+                const fileName = `${Date.now()}_${Math.random().toString(36).substr(2, 9)}.${fileExt}`;
+
+                // Upload to Supabase
+                const { data, error } = await supabase.storage
+                    .from('avatars')
+                    .upload(fileName, file);
+
+                if (error) throw error;
+
+                // Get public URL
+                const { data: { publicUrl } } = supabase.storage
+                    .from('avatars')
+                    .getPublicUrl(fileName);
+
+                // Update Firestore with new avatar URL
+                await setDoc(doc(db, 'users', currentUser.uid), {
+                    avatarUrl: publicUrl,
+                    updatedAt: new Date()
+                }, { merge: true });
+
+                // Update image preview
+                profileImage.src = publicUrl;
+                progressElement.textContent = 'Upload complete!';
+
+                // Clear message after 3 seconds
+                setTimeout(() => {
+                    progressElement.textContent = '';
+                }, 3000);
+
+            } catch (error) {
+                console.error('Upload error:', error);
+                progressElement.textContent = error.message || 'Upload failed';
+                setTimeout(() => {
+                    progressElement.textContent = '';
+                }, 3000);
+            } finally {
+                // Hide loading overlay
+                loadingOverlay.classList.remove('active');
+            }
+        }
+
+        // Set up image upload listener
+        document.getElementById('imageUpload').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                handleImageUpload(file);
+            }
+        });
+
+        // Load user profile
+        async function loadUserProfile() {
+            try {
+                const userDoc = await getDoc(doc(db, 'users', currentUser.uid));
+
+                if (userDoc.exists()) {
+                    const userData = userDoc.data();
+                    if (userData.avatarUrl) {
+                        document.getElementById('profileImage').src = userData.avatarUrl;
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading profile:', error);
+            }
+        }
+
+        // Auth state observer
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                currentUser = user;
+                document.getElementById('profileEmail').textContent = user.email;
+                await loadUserProfile();
+            } else {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main {
+    max-width: 1440px;
+    background-color: rgb(86, 179, 179);
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 900px;
+    background-color: rgb(136, 136, 57);
+    margin: 0 auto;
+    /* flex problem*/
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; */
+
+    /* Solution - Grid Layout */
+    display: grid;
+    /* grid-template-columns: 100px 300px 200px; */
+    /* grid-template-rows: 100px 200px; */
+    /* grid-template-columns: 40px 50px auto 50px 40px; */
+    /* grid-template-rows: 25% 100px auto; */
+    /* grid-template-columns: 33% 33% 33%; */
+    /* grid-template-columns:  150px auto 200px 1fr; */
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: 50% 50%; */
+    justify-items: center;
+    align-items: center;
+}
+
+
+.items {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: chocolate;
+    color: white;
+    margin: 5px;
+}
+/* .item06 {
+    display: flex;
+    align-self: left;
+} */

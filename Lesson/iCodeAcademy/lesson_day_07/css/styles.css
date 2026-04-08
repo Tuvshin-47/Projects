@@ -1,0 +1,49 @@
+main {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h1 {
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+
+header {
+    height: 40px;
+}
+
+header h1 {
+    padding: 20px;
+}
+
+aside {
+    background-color: gainsboro;
+}
+#container {
+    margin-top: 60px;
+}
+
+aside {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+}
+
+section {
+    width: 70%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+footer {
+    background-color: gray;
+    color: white;
+    height: 40px;
+}
+
+footer p {
+    text-align: center;
+    padding-top: 10px;
+}

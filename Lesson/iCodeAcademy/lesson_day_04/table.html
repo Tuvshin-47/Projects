@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Lesson Day 04 - HTML table</title>
+    </head>
+
+    <body>
+        <h1>Lesson Day 04 - HTML table</h1>
+
+        <div>
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Income</th>
+                        <th>Expenditure</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1st January</td>
+                        <td>250</td>
+                        <td>36</td>
+                    </tr>
+                    <tr>
+                        <td>2nd January</td>
+                        <td>285</td>
+                        <td>48</td>
+                    </tr>
+                    <tr>
+                        <td>31st January</td>
+                        <td>129</td>
+                        <td>64</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td>7824</td>
+                        <td>1241</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <h2>Colspan and Rowspan</h2>
+        <div>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>9am</th>
+                        <th>10am</th>
+                        <th>11am</th>
+                        <th>12pm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>monday</th>
+                        <td colspan="2">geography</td>
+                        <td>math</td>
+                        <td rowspan="2">art</td>
+                    </tr>
+                    <tr>
+                        <th>tuesday</th>
+                        <td colspan="3">gym</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

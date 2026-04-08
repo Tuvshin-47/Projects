@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson Day 06 - Box 1</title>
+    <style>
+      .box-01,
+      .box-02 {
+        background-color: aqua;
+        color: tomato;
+        height: 200px;
+        border-top: 5px;
+        border-left: 5px;
+        border-right: 5px;
+        border-bottom: 5px;
+        border-style: groove;
+        border-color: blueviolet;
+        /* width: 400px; */
+      }
+      .box-02 {
+        max-width: 500px;
+        max-height: 300px;
+      }
+      .box-03 {
+        max-width: 100px;
+        max-height: 100px;
+        background-color: azure;
+        border: 2px dotted rgba(145, 23, 45, 0.6);
+        /* overflow-x: hidden;
+        overflow-y: scroll; */
+        overflow: hidden;
+      }
+     
+      .item {
+        border: 2px solid tomato;
+        width: 50px;
+        height: 50px;
+        /* display: inline; */
+        display: inline-block;
+        /* margin top, left, bottom, right */
+        /* margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 15px;
+        margin-bottom: 20px; */
+        /* only margin */
+        /* margin: 5px 15px 20px 10px; */
+
+        /* same/one margin */
+        /* бүх талаас */
+        /* margin: 10px; */
+
+        /* 3 value margin */
+        /* дээд тал 5px, зүүн болон баруун тал 10px, доод талаас 15px  */
+        /* margin: 5px 10px 15px; */
+
+        /* 2 value margin */
+        /* зүүн баруун нь 10px, дээд доод нь 5px */
+        /* margin: 5px 10px; */
+
+        /* text-align: center; */
+      }
+
+      .centered-box {
+        width: 400px;
+        height: 500px;
+        background-color: aqua;
+        text-align: center;
+        font-size: 50px;
+        margin: 5px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lesson Day 06 - Box Model Part-1</h1>
+    <h2>Box Model 01 - Fixed Width and Fixed Height</h2>
+    <div class="box-01"></div>
+    <h2>Dynamic Width and Dynamic Height</h2>
+
+    <div class="box-02"></div>
+
+    <h2>Box Content</h2>
+
+    <div class="box-03">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+      itaque nulla dolor quas voluptates debitis cum nesciunt suscipit, ab
+      asperiores ducimus! Sint aliquam quos commodi eveniet, excepturi eum
+      placeat vitae. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Placeat nisi dolore corporis dolor, deserunt iure molestiae eveniet
+      accusamus eum at sapiente doloremque ea exercitationem repellendus quis
+      perferendis praesentium! Similique, harum. Lorem ipsum dolor sit, amet
+      consectetur adipisicing elit. Autem vitae quo consequatur voluptatum
+      aliquid laboriosam doloremque, aperiam molestias odio, architecto maxime
+      consectetur ab perspiciatis dignissimos nobis adipisci unde fugiat
+      suscipit!
+    </div>
+
+    <h2>Inline vs Block Element</h2>
+
+    <div class="container">
+        <div class="item">
+            Item 01
+        </div>
+        <div class="item">
+            Item 02
+        </div>
+        <div class="item">
+            Item 03
+        </div>
+        <div class="item">
+            Item 04
+        </div>
+    </div>
+
+    <h2>Centered Box</h2>
+    <div class="centered-box">
+        Center box
+    </div>
+  </body>
+</html>

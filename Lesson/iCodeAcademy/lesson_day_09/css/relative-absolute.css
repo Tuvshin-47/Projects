@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    border: 2px solid #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    height: 200px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    color: white;
+}
+
+#relative-box {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+#absolute-box {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+.description {
+    margin-top: 10px;
+}
+
+#absolute-header {
+    position: absolute;
+    top: 0px;
+    right: 40px;
+}
